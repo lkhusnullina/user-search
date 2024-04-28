@@ -11,6 +11,7 @@ export const SearchInput = styled.input`
   height: 52px;
   width: 500px;
   padding-left: 30px;
+  padding-right: 30px;
 
   font-size: 20px;
   color:#ffffff;

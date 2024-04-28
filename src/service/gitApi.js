@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const GitApi = createApi({
   reducerPath: 'gitApi',
@@ -6,7 +6,15 @@ export const GitApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://api.github.com/',
   }),
-})
-export const {} = GitApi
-export default GitApi.reducer
+  endpoints: (builder) => ({
+    getAllUsers: builder.query({
+      query: () => ({
+        url: '/search/users?q=lkhusnullina',
+      }),
+      providesTags: ['Users'],
+    }),
+  }),
+});
 
+export const { useGetAllUsersQuery } = GitApi;
+export default GitApi.reducer;
