@@ -7,14 +7,14 @@ export const GitApi = createApi({
     baseUrl: 'https://api.github.com/',
   }),
   endpoints: (builder) => ({
-    getAllUsers: builder.query({
-      query: () => ({
-        url: '/search/users?q=lkhusnullina',
+    getUsers: builder.query({
+      query: (username) => ({
+        url: `/search/users?q=${username}`,
       }),
       providesTags: ['Users'],
     }),
   }),
 });
 
-export const { useGetAllUsersQuery } = GitApi;
+export const { useLazyGetUsersQuery } = GitApi;
 export default GitApi.reducer;

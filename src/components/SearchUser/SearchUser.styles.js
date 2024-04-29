@@ -15,7 +15,7 @@ export const SearchInput = styled.input`
 
   font-size: 20px;
   color:#ffffff;
-  border-radius: 46px;
+  border-radius: 10px;
   border: 2px solid #ffffff;
   background: transparent;
 `;
@@ -26,7 +26,7 @@ export const SearchButton = styled.button`
 
   background-color: #00c1ff;
   border: none;
-  border-radius: 46px;
+  border-radius: 10px;
   
   font-size: 24px;
   font-weight: 400;
@@ -35,4 +35,9 @@ export const SearchButton = styled.button`
   color: #fff;
 
   cursor: pointer;
+  transition: all 0.5s ease 0s;
+  &:hover {
+    background: #007aff;
+    border: none;
+  }
 `;

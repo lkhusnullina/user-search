@@ -1,20 +1,19 @@
 import { useSelector } from 'react-redux';
 import User from '../User/User.jsx';
-import * as S from './ListUsers.styles.js';
+import * as S from './Users.styles.js';
 
-function ListUsers() {
+function Users() {
     const users = useSelector((state) => state.users.users);
-    console.log(users);
 
     return (
-        <S.ListUsersBlock>
+        <S.UsersBlock>
             {users && users.length > 0 ? (
                 users.map((user) => <User key={user.id} user={user} />)
             ) : (
                 <h3>Запрос не сделан</h3>
             )}
-        </S.ListUsersBlock>
+        </S.UsersBlock>
     );
 }
 
-export default ListUsers;
+export default Users;

@@ -1,9 +1,10 @@
 import * as S from './User.styles.js';
 
-function User(user) {
+function User({user}) {
     return (
         <S.UserBlock>
-            <S.UserLogo src="assets/img/logo.png" alt="logo" />
+            <S.UserAvatar src={user.avatar_url} alt="avatar" />
+            <S.UserName>{user.login}</S.UserName>
         </S.UserBlock>
     );
 }

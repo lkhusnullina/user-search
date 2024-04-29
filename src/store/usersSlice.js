@@ -4,10 +4,12 @@ const usersSlice = createSlice({
   name: 'users',
   initialState: {
     users: [],
+    totalCount: 0,
   },
   reducers: {
     setUsers(state, action) {
-      state.users = action.payload.users;
+      state.totalCount = action.payload.users.total_count;
+      state.users = action.payload.users.items;
     },
   },
 });
