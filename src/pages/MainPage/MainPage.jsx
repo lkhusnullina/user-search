@@ -2,8 +2,6 @@ import * as S from './MainPage.styles';
 import SearchUser from '../../components/SearchUser/SearchUser.jsx';
 import SortUsers from '../../components/SortUsers/SortUsers.jsx';
 import Users from '../../components/Users/Users.jsx';
-import { useGetAllUsersQuery } from '../../service/gitApi';
-import { useSelector } from 'react-redux';
 
 export const MainPage = () => {
 

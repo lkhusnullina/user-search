@@ -1,35 +1,34 @@
 import styled from 'styled-components';
 
 export const UserBlock = styled.div`
-  margin-top: 30px;
-  padding: 10px;
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  gap:10px;
+  gap: 10px;
   
-  width: 200px;
+  width: 250px;
   cursor: pointer;
   border-radius: 10px;
+
   &:hover {
-    background: #00c1ff;
     transform: scale(1.1);
     transition: all 0.6s ease 0s;
   }
 `;
 
 export const UserAvatar = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 90px;
+  height: 90px;
   border-radius: 10%;
 `;
 
 export const UserName = styled.span`
   display: block;
-  font-size: 25px;
+  font-size: 20px;
   color: #ffffff;
-  overflow-wrap: break-word;
+  word-wrap: break-word;
   text-wrap: wrap;
   text-align: center;
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const UsersBlock = styled.div`
-    margin-top: 30px;
+    margin-top: 40px;
     display: flex;
     flex-flow: wrap;
     max-width: 100vh;
