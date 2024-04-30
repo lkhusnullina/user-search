@@ -14,7 +14,7 @@ export const SortTitle = styled.h2`
 
 export const SortButton = styled.button`
   height: 52px;
-  width: 250px;
+  width: 200px;
 
   border: 2px solid #ffffff;
   border-radius: 10px;
@@ -22,13 +22,24 @@ export const SortButton = styled.button`
   font-size: 25px;
   font-weight: 500;
   text-align: center;
-  color: #ffffff;
+  color: ${props => props.$isActive ? "#b672ff" : "FFF" };
   cursor: pointer;
   transition: all 0.5s ease 0s;
   
+  // &:hover {
+  //   background: #b9ea2d;
+  //   color: #000000;
+  //   border: none;
+  // }
+  
+
   &:hover {
-    background: #b9ea2d;
-    color: #000000;
-    border: none;
+    color: #b672ff;
+    text-decoration-line: underline;
+  }
+
+  &:active {
+    cursor: pointer;
+    text-decoration-line: none;
   }
 `;

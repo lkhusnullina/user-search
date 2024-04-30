@@ -9,6 +9,7 @@ const usersSlice = createSlice({
     gitHubUsersPerPage: 30,
     page: 1,
     maxPage: 1,
+    sort: null,
   },
   reducers: {
     setUsers(state, action) {
@@ -31,6 +32,9 @@ const usersSlice = createSlice({
         state.page = state.page - 1;
       }
     },
+    setSort(state, action) {
+      state.sort = action.payload.sort;
+    },
     resetPage(state) {
       state.page = 1;
     }
@@ -38,4 +42,4 @@ const usersSlice = createSlice({
 });
 
 export const usersReducer = usersSlice.reducer
-export const { setUsers, selectUser, deselectUser, setNextPage, setPrevPage, resetPage } = usersSlice.actions;
+export const { setUsers, selectUser, deselectUser, setNextPage, setPrevPage, setSort, resetPage } = usersSlice.actions;
