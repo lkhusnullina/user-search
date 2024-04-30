@@ -6,7 +6,6 @@ function Paginate() {
     const dispatch = useDispatch();
     const page = useSelector((state) => state.users.page);
     const maxPage = useSelector((state) => state.users.maxPage);
-    console.log(maxPage);
 
     return (
         <S.PaginateBlock>

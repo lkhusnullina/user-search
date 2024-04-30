@@ -11,11 +11,11 @@ function Users() {
     return (
         <S.UsersBlock>
             {totalCount < 0 ? (
-                <h3>Сделай запрос для поиска</h3>
+                <h3 style={{ color: '#00c1ff' }}>Введите логин для поиска</h3>
             ) : users && users.length > 0 ? (
                 users.map((user) => <User key={user.id} user={user} />)
             ) : (
-                <h3>Пользователь не найден</h3>
+                <h3 style={{ color: 'red' }}>Пользователь не найден</h3>
             )}
             {selectedUser && <ModalUser user={selectedUser} />}
         </S.UsersBlock>
