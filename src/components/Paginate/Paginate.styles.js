@@ -7,7 +7,7 @@ export const PaginateBlock = styled.div`
 `;
 
 export const PaginateButtons = styled.div`
-    margin-botton: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: row;
     gap: 20px;
