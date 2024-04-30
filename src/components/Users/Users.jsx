@@ -12,7 +12,7 @@ function Users() {
             {users && users.length > 0 ? (
                 users.map((user) => <User key={user.id} user={user}/>)
             ) : (
-                <h3>Запрос не сделан</h3>
+                <h3>Сделай запрос для поиска</h3>
             )}
             {selectedUser && <ModalUser user={selectedUser}/>}
         </S.UsersBlock>

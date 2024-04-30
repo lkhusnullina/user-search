@@ -1,13 +1,14 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useLazyGetUsersQuery } from '../../service/gitApi.js';
-import { setUsers } from '../../store/usersSlice';
+import { resetPage, setUsers } from '../../store/usersSlice';
 import * as S from './SearchUser.styles.js';
 
 function SearchUser() {
   const dispatch = useDispatch();
+  const page = useSelector((state) => state.users.page);
   const [username, setUsername] = useState('');
-  const [trigger, { data: users }] = useLazyGetUsersQuery(username);
+  const [trigger, { data: users }] = useLazyGetUsersQuery({username, page});
 
   useEffect(() => {
     if (!users) return;
@@ -15,12 +16,23 @@ function SearchUser() {
     console.log(users);
   }, [users])
 
+  useEffect(() => {
+    console.log(22);
+    console.log(page);  
+    if (!username) return;
+    console.log("trg");
+    trigger({username, page});
+  }, [page])
 
+  const searchClick = () => {
+    dispatch(resetPage());
+    trigger({username, page});
+  }
 
   return (
     <S.SearchBlock>
       <S.SearchInput type="search" placeholder="Введите логин пользователя" value={username} onChange={e => setUsername(e.target.value)}/>
-      <S.SearchButton onClick={() => trigger(username)} disabled={username == ""}>Найти</S.SearchButton>
+      <S.SearchButton onClick={searchClick} disabled={username == ""}>Найти</S.SearchButton>
     </S.SearchBlock>
   );
 }

@@ -12,7 +12,7 @@ function ModalUser() {
                 <S.ModalClose src="assets/img/close.svg" alt="closeButton" onClick={() => dispacth(deselectUser({ user }))}/>
                 <S.ModalAvatar src={user.avatar_url} alt="avatar" />
                 <S.ModalName>{user.login}</S.ModalName>
-                <S.ModalLink to={user.html_url} >{user.html_url}</S.ModalLink>
+                <S.ModalLink to={user.html_url} target="_blank">Ссылка на GitHub пользователя</S.ModalLink>
             </S.ModalDiv>
         </S.ModalBlock>
     );

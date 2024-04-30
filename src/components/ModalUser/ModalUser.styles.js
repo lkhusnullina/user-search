@@ -57,7 +57,7 @@ export const ModalLink = styled(Link)`
     text-align: center;
 `;
 
-export const ModalClose = styled.svg`
+export const ModalClose = styled.img`
     position: relative;
     top: -30px;
     left: 195px;

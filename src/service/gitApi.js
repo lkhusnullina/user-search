@@ -8,8 +8,8 @@ export const GitApi = createApi({
   }),
   endpoints: (builder) => ({
     getUsers: builder.query({
-      query: (username) => ({
-        url: `/search/users?q=${username}`,
+      query: ({username, page}) => ({
+        url: `/search/users?q=${username}&page=${page}`,
       }),
       providesTags: ['Users'],
     }),

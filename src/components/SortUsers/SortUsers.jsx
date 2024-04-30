@@ -3,9 +3,9 @@ import * as S from './SortUsers.styles.js';
 function SortUsers() {
   return (
     <S.SortBlock>
-        <S.SortTitle>Сортировка репозиториев:</S.SortTitle>
-        <S.SortButton>По возрастанию</S.SortButton>
-        <S.SortButton>По убыванию</S.SortButton>
+        <S.SortTitle>Сортировка репозиториев по:</S.SortTitle>
+        <S.SortButton>возрастанию</S.SortButton>
+        <S.SortButton>убыванию</S.SortButton>
     </S.SortBlock>
   );
 }
