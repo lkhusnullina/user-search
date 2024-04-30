@@ -1,7 +1,11 @@
+import { Link } from 'react-router-dom';
+import * as S from './NotFounPage.styles.js';
+
 export const NotFoundPage = () => {
     return (
-        <div>
-            <h1>Pages was not found :c</h1>
-        </div>
+        <S.ContainerNotFound>
+            <S.TitleNotFound>Страница не найдена</S.TitleNotFound>
+            <Link to='/'>Вернуться на главную</Link>
+        </S.ContainerNotFound>
     )
 }

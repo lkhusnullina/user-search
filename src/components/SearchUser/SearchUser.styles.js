@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const SearchBlock = styled.div`
     margin-top: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 20px;
 `;
@@ -45,4 +46,10 @@ export const SearchButton = styled.button`
         opacity: 0.5;
         background: grey;
     }
+`;
+
+export const SearchForm = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 `;
