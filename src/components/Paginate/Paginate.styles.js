@@ -29,8 +29,14 @@ export const PaginateButton = styled.button`
 
     cursor: pointer;
     transition: all 0.3s ease 0s;
+
     &:hover {
         background: #007aff;
         border: none;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        background: grey;
     }
 `;

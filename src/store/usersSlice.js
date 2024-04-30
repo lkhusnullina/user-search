@@ -44,6 +44,7 @@ const usersSlice = createSlice({
       state.selectedUser = null;
       state.page = 1;
       state.maxPage = 1;
+      state.sort = null;
     }
   },
 });

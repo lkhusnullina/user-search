@@ -8,27 +8,26 @@ function SearchUser() {
     const dispatch = useDispatch();
     const page = useSelector((state) => state.users.page);
     const sort = useSelector((state) => state.users.sort);
-    const totalCount = useSelector((state) => state.users.totalCount);
     const [username, setUsername] = useState('');
     const [trigger, { data: users, isLoading, error }] = useLazyGetUsersQuery({
-        username,
-        page,
-        sort,
+      username,
+      page,
+      sort,
     });
 
     useEffect(() => {
-        if (!users) return;
-        dispatch(setUsers({ users }));
+      if (!users) return;
+      dispatch(setUsers({ users }));
     }, [users]);
 
     useEffect(() => {
-        if (!username) return;
-        trigger({ username, page, sort });
+      if (!username) return;
+      trigger({ username, page, sort });
     }, [page, sort]);
 
     const searchClick = () => {
-        dispatch(resetPage());
-        trigger({ username, page, sort });
+      dispatch(resetPage());
+      trigger({ username, page, sort });
     };
 
     useEffect(() => {
@@ -40,17 +39,18 @@ function SearchUser() {
     return (
         <S.SearchBlock>
             <S.SearchInput
-                type="search"
-                placeholder="Введите логин пользователя"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+              type="search"
+              placeholder="Введите логин пользователя"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <S.SearchButton
-                onClick={searchClick}
-                disabled={isLoading || username === ''}
+              onClick={searchClick}
+              disabled={isLoading || username === ''}
             >
-                {isLoading ? 'Поиск...' : 'Найти'}
+              {isLoading ? 'Поиск...' : 'Найти'}
             </S.SearchButton>
+            
         </S.SearchBlock>
     );
 }

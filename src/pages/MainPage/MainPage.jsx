@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 
 export const MainPage = () => {
     const maxPage = useSelector((state) => state.users.maxPage);
-    
+
     return (
         <S.ContainerMain>
             <S.HeaderMain>
