@@ -17,7 +17,7 @@ function SearchUser() {
     });
 
     function isValidUsername(username) {
-        return /^[a-zA-Z0-9-]*$/.test(username);
+        return /^[a-zA-Z0-9-._]*$/.test(username);
     }
 
     const handleChange = (event) => {
