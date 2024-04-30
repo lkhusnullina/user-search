@@ -45,22 +45,22 @@ body {
     font-size: 20px;
     color: #ffffff;
     background-color: #181818;
-    overflow: auto;
+    // overflow: auto;
 
-    scrollbar-width: 5px; 
-    scrollbar-color: #d7def2 transparent; 
+    // scrollbar-width: 5px; 
+    // scrollbar-color: #d7def2 transparent; 
 
-    &::-webkit-scrollbar {
-        width: 1px; 
-    }
+    // &::-webkit-scrollbar {
+    //     width: 1px; 
+    // }
 
-    &::-webkit-scrollbar-track {
-        background-color: transparent; 
-    }
+    // &::-webkit-scrollbar-track {
+    //     background-color: transparent; 
+    // }
 
-    &::-webkit-scrollbar-thumb {
-        background-color: transparent; 
-    }
+    // &::-webkit-scrollbar-thumb {
+    //     background-color: transparent; 
+    // }
 }
 
 div,
@@ -72,9 +72,8 @@ a {
 
 export const Container = styled.div`
   max-width: 1920px;
-  // max-height: 100vh;
+  max-height: 100vh;
   height: 100vh;
   margin: 0 auto;
-//   position: relative;
   overflow: scroll;
 `
