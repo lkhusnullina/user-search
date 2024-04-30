@@ -4,7 +4,7 @@ const usersSlice = createSlice({
   name: 'users',
   initialState: {
     users: [],
-    totalCount: 0,
+    totalCount: -1,
     selectedUser: null,
     gitHubUsersPerPage: 30,
     page: 1,
@@ -37,9 +37,16 @@ const usersSlice = createSlice({
     },
     resetPage(state) {
       state.page = 1;
+    },
+    clearStore(state) {
+      state.users = [];
+      state.totalCount = -1;
+      state.selectedUser = null;
+      state.page = 1;
+      state.maxPage = 1;
     }
   },
 });
 
 export const usersReducer = usersSlice.reducer
-export const { setUsers, selectUser, deselectUser, setNextPage, setPrevPage, setSort, resetPage } = usersSlice.actions;
+export const { setUsers, selectUser, deselectUser, setNextPage, setPrevPage, setSort, resetPage, clearStore } = usersSlice.actions;
