@@ -6,12 +6,13 @@ function Paginate() {
     const dispatch = useDispatch();
     const page = useSelector((state) => state.users.page);
     const maxPage = useSelector((state) => state.users.maxPage);
+    console.log(maxPage);
 
     return (
         <S.PaginateBlock>
             <S.PaginateButtons>
                 <S.PaginateButton onClick={() => dispatch(setPrevPage())} disabled={page <= 1}>Назад</S.PaginateButton>
-                <S.PaginateButton onClick={() => dispatch(setNextPage())} disabled={page <= maxPage}>Вперед</S.PaginateButton>
+                <S.PaginateButton onClick={() => dispatch(setNextPage())} disabled={page === maxPage}>Вперед</S.PaginateButton>
             </S.PaginateButtons>
         </S.PaginateBlock>
     );
