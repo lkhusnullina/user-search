@@ -24,7 +24,6 @@ const usersSlice = createSlice({
       state.selectedUser = null;
     },
     setNextPage(state, action) {
-      console.log(`max page ${state.maxPage} current page ${state.page} next page ${state.page +1}`);
       state.page = state.maxPage < state.page + 1 ? state.maxPage : state.page + 1;
     },
     setPrevPage(state, action) {

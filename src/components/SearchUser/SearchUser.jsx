@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLazyGetUsersQuery } from '../../service/gitApi.js';
 import { clearStore, resetPage, setUsers } from '../../store/usersSlice';
 import * as S from './SearchUser.styles.js';
@@ -10,7 +10,6 @@ function SearchUser() {
     const sort = useSelector((state) => state.users.sort);
     const [username, setUsername] = useState('');
     const [errorName, setErrorName] = useState(null);
-    const ref = useRef();
     const [trigger, { data: users, isLoading, error }] = useLazyGetUsersQuery({
         username,
         page,
@@ -31,7 +30,6 @@ function SearchUser() {
     };
 
     useEffect(() => {
-      console.log(1);
         if (!users) return;
         dispatch(setUsers({ users }));
     }, [users]);
@@ -41,11 +39,7 @@ function SearchUser() {
         trigger({ username, page, sort });
     }, [page, sort]);
 
-    const searchClick = (e) => {
-        e.preventDefault();
-        if (e.keyCode === 13 || e.keyCode === 'Enter') {
-            ref.current.submit();
-        }
+    const searchClick = () => {
         dispatch(resetPage());
         trigger({ username, page, sort });
     };
@@ -69,8 +63,6 @@ function SearchUser() {
                     }}
                 />
                 <S.SearchButton
-                    ref={ref}
-                    type="submit"
                     onClick={searchClick}
                     disabled={isLoading || username === '' || errorName}
                 >
