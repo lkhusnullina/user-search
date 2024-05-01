@@ -11,7 +11,7 @@ function Paginate() {
         <S.PaginateBlock>
             <S.PaginateButtons>
                 <S.PaginateButton onClick={() => dispatch(setPrevPage())} disabled={page <= 1}>Назад</S.PaginateButton>
-                <S.PaginateNum>{page}/{maxPage}</S.PaginateNum>
+                <S.PaginateNum>{page} / {maxPage}</S.PaginateNum>
                 <S.PaginateButton onClick={() => dispatch(setNextPage())} disabled={page === maxPage}>Вперед</S.PaginateButton>
             </S.PaginateButtons>
         </S.PaginateBlock>
