@@ -33,7 +33,4 @@ npm run start
 ### Технологии: 
 React Redux/toolkit RTK Query React Router Styled Components ESLint Prettier
 
-## Деплой проекта: https://master--search-user-skypro.netlify.app
-
-
 ![image](https://github.com/lkhusnullina/user-search/assets/101172468/f0e98592-1ad5-4c4b-9beb-b48057436929)
