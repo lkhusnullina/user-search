@@ -33,4 +33,4 @@ npm run start
 ### Технологии: 
 React Redux/toolkit RTK Query React Router Styled Components ESLint Prettier
 
-![image](https://github.com/lkhusnullina/user-search/assets/101172468/f0e98592-1ad5-4c4b-9beb-b48057436929)
+![image](https://github.com/lkhusnullina/user-search/assets/101172468/d7b165e6-7755-49de-b8a8-8c4834762dc2)
