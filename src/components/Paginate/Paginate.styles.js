@@ -12,6 +12,7 @@ export const PaginateButtons = styled.div`
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+    align-items: center;
 `;
 
 export const PaginateButton = styled.button`
@@ -41,3 +42,7 @@ export const PaginateButton = styled.button`
         background: grey;
     }
 `;
+
+export const PaginateNum = styled.div`
+    color: #ffffff;
+`
