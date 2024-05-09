@@ -11,6 +11,11 @@
 
 ### Деплой проекта: https://master--search-user-skypro.netlify.app
 
+![image](https://github.com/lkhusnullina/user-search/assets/101172468/d7b165e6-7755-49de-b8a8-8c4834762dc2)
+
+### Технологии: 
+React Redux/toolkit RTK Query React Router Styled Components ESLint Prettier
+
 #### Запуск проекта
 
 #### Скачайте архив проекта или склонируйте репозиторий
@@ -30,7 +35,5 @@ npm install
 npm run start
 ```
 
-### Технологии: 
-React Redux/toolkit RTK Query React Router Styled Components ESLint Prettier
 
-![image](https://github.com/lkhusnullina/user-search/assets/101172468/d7b165e6-7755-49de-b8a8-8c4834762dc2)
+
